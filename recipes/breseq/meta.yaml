@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 build:
-  number: 0
+  number: 1
 
 source:
   fn: {{ name|lower }}_{{ version }}.tar.gz
@@ -17,11 +17,11 @@ requirements:
   build:
   - gcc  # [not osx]
   - llvm  # [osx]
-  - zlib
+  - zlib {{CONDA_ZLIB}}*
 
   run:
   - libgcc  # [not osx]
-  - zlib
+  - zlib {{CONDA_ZLIB}}*
   - r-base
   - bowtie2
 
@@ -29,6 +29,7 @@ test:
   commands:
     - breseq --help 2>&1 | grep Usage
     - gdtools --help 2>&1 | grep Usage
+    - bowtie2 --help
 
 about:
   home: https://github.com/barricklab/breseq
