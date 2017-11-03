@@ -18,3 +18,7 @@ about:
   home: https://github.com/zd1/telseq
   license: GPLv3
   summary: Telseq - a software that estimates telomere length from whole genome sequencing data (BAMs)
+
+test:
+  commands:
+    - telseq -h
