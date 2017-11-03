@@ -1,0 +1,20 @@
+build:
+  number: 0
+  skip: True # [osx]
+
+package:
+  name: telseq
+  version: "v0.10.1"
+source:
+  fn: v0.0.1.tar.gz
+  url: https://github.com/zd1/telseq/archive/v0.0.1.tar.gz
+  md5: 9bcdd906cd38677b0c865aba1dc606fa
+requirements:
+  build:
+    - bamtools
+  run:
+    - bamtools
+about:
+  home: https://github.com/zd1/telseq
+  license: GPLv3
+  summary: Telseq
